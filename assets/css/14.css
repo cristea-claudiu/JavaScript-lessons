@@ -1,0 +1,12 @@
+.header{
+    color: blue;
+    font-size: 50px;
+    text-align: center;
+}
+.background{
+    background-color: burlywood;
+    margin-left:3%;
+    padding: 5px;
+    border-radius: 9px;
+    box-shadow: -1rem .5rem rgba(0,0,0,.1);
+}

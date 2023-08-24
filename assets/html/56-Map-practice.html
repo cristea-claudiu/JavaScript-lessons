@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+<body>
+
+
+
+
+
+    <script>
+const animals = ['camel', 'dog', 'cat', 'mouse','deer','elephant'];
+const cb= function(x){console.log(x);}
+animals.map(cb);
+
+const capitalAnimals=animals.map((x)=>{
+    return  x.toUpperCase()
+    })
+console.log(capitalAnimals);
+const euro=21.33;
+const usd=20.4;
+const prices=[400,600,750,100,300,250,100]
+const convertPricesToEuro=prices.map((x)=>Number(( x/euro).toFixed(2)))
+const convertPricesToUSD=prices.map((x)=>Number(( x/usd).toFixed(2)))
+console.log(convertPricesToEuro);
+console.log(convertPricesToUSD);
+console.log(prices);
+
+const prducts=[
+    {id:1,name:'iphone',price:900},
+    {id:2,name:'laptop',price:1600},
+    {id:3,name:'iwatch',price:550},
+    {id:4,name:'iPad',price:1100},
+    {id:5,name:'mouse',price:100},
+    {id:6,name:'keyboard',price:150},
+    {id:7,name:'earpods',price:250}
+
+]
+
+const newProducts=prducts.map((product)=>{
+    if(product.price>500){
+    product.price=(product.price*1.2).toFixed(2)
+    }else{
+        product.price=(product.price*1.15).toFixed(2)
+    }
+    return product
+})
+console.log(newProducts);
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+        let x= false;
+        let y= true;
+        let z="true"
+        let k="mouse"
+        let l="cat"
+        let m=null
+
+        const c1=y&&z&&l&&x;
+        const c2= k||x||z;
+        const c3= !m;
+        const c4= !c3;
+        console.log(c1, typeof c1);
+        console.log(c2, typeof c2);
+        console.log(c3);
+        console.log(c4);
+
+        const userAge=prompt("Enter Age")
+        const inputMoreThen20= userAge>=20&& alert("Big enough")   
+        const inputLessThen20= userAge<20&&userAge&& alert("Need to grow") 
+        const inputNumber= isNaN(userAge)&& alert("Enter a number")  
+        const inputfalse= userAge||alert("Enter something")  
+
+
+
+    </script>
+</body>
+</html>

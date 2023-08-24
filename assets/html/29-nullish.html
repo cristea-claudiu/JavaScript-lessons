@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nullish</title>
+</head>
+<body>
+    
+
+    <script>
+let salary;
+ salary= null;
+// alert(salary ?? "salary is empty")
+        
+// if(salary== null || salary== undefined){
+//     alert(1500)
+// }
+    function calculateArea(a,b){
+
+        
+        const result=(a ?? 0)*(b ?? 0);
+        return result;
+    }
+
+    console.log(calculateArea(2));
+
+    </script>
+</body>
+</html>

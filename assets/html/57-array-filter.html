@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array filter</title>
+</head>
+<body>
+
+
+
+
+
+
+    <script>
+
+const products=[
+    {id:1,name:'iphone',price:900},
+    {id:2,name:'laptop',price:1600},
+    {id:3,name:'iwatch',price:550},
+    {id:4,name:'iPad',price:1100},
+    {id:5,name:'mouse',price:50},
+    {id:6,name:'keyboard',price:99},
+    {id:7,name:'earpods',price:250}
+]
+
+const filterArray=(ch)=>{
+    const filteredProducts= products.filter((product)=>product.name.startsWith(ch));
+    return filteredProducts
+}
+console.log(filterArray("m"));
+
+
+//pipeline
+const newArr=products.
+filter((product)=>product.price<251).
+map(x=>{x.price*=1.1; return x}).
+forEach((x)=>console.log(x));
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

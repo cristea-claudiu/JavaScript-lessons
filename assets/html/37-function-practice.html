@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+                          
+    <input id="inputP" type="number" placeholder="Price">
+    <input id="inputDR" type="number" placeholder="Discount Rate">
+    <input id="inputVAT" type="number" placeholder="VAT">
+    <button onclick="setPrice()">Set price</button>
+    <p  id="resultTxt"></p>
+
+
+
+
+
+
+
+
+    <script>
+const inputPrice = document.querySelector("#inputP")
+const inputDR = document.querySelector("#inputDR")
+const inputVAT = document.querySelector("#inputVAT")
+const resultTxt=document.querySelector("#resultTxt")
+const setPrice = ()=>{
+    const result = getPrice((Number(inputPrice.value)),(Number(inputDR.value)),(Number(inputVAT.value)))
+    resultTxt.innerHTML=`The price is: $${result}`
+        }
+            
+        
+    const getPrice=(price, discountRate, vat)=>{
+        if(!price || isNaN(price) || price < 0)return;
+        if((!discountRate || isNaN(discountRate) )|| discountRate <= 0 || discountRate > 100)discountRate=0;
+        if(!vat || isNaN(vat)) vat=0;
+        if(price>1500)discountRate+=10
+        if(price <1500 && discountRate == 0)vat=0 
+        let finalprice=(price-(price*discountRate/100)+(price*vat/100)).toFixed(2);
+        if(finalprice<0){
+            finalprice=0.00;
+        }
+        return finalprice;
+
+    }       
+    console.log('The price is:',getPrice(150005,91,1));
+    </script>
+</body>
+</html>

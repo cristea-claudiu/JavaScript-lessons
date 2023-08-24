@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays Methods</title>
+</head>
+<body>
+        <h1>Array Mutator</h1>
+
+
+
+
+
+
+    <script>
+        //    .push() add element at the end of array
+            const cars=['Porsche','Ferrari','Lamborghini','Tesla','Nevara']
+            console.log(cars);
+            const arrlength=cars.push('BMW')
+            console.log(cars);
+            console.log(arrlength);
+        //    .pop() delete the element from the end of array
+        console.log(cars.pop());
+        console.log(cars);
+        //    .shift() delete element at index 0
+        console.log(cars.shift());
+        console.log(cars);
+        //    .unshift() add element at the index 0
+        console.log(cars.unshift('Porsche'));
+        console.log(cars);
+        //    .sort() sort the array
+        console.log(cars.sort());
+        //    .reverse() arange the array in reverse
+        console.log(cars.reverse());
+        //    .splice(1,2) cut from index 1 , 2 elements
+        //    .splice(1,0,'Toyota','Dacia') add 'Toyota','Dacia' after index 1
+        console.log(cars.splice(3,2));
+        console.log(cars.splice(1,0,'Toyota','Dacia'));
+        console.log(cars);
+
+
+
+        let arr= [1,4,6,3,5,8,6,7]
+        arr.sort()
+        console.log(arr);
+        arr.reverse()
+        console.log(arr);
+        
+    </script>
+</body>
+</html>

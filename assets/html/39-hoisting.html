@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting</title>
+</head>
+<body>
+    
+
+
+
+
+    <script>
+        // let y;
+        // console.log(y);
+        // var x;
+        console.log(x);
+       let y=20;
+      var   x=10;
+        console.log(x);
+        console.log(y);
+
+
+        
+        // sayHello();
+        sayHello1();
+        var sayHello= function(){
+            console.log("Hello");
+        }
+                sayHello();
+
+        function sayHello1(){
+            console.log("Hello1");
+        }
+    </script>
+</body>
+</html>

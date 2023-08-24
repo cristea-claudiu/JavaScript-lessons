@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New array practice</title>
+</head>
+<body>
+
+    <h3 id="arrPrice"></h3>
+    <button id="btnUpdate">Update Price</button>
+    <h4 id="arrNewPrice"></h4>
+
+
+
+
+
+
+
+    
+    <script>
+
+
+    const arrPriceEl=document.querySelector("#arrPrice")
+    const btnUpdate=document.querySelector("#btnUpdate")
+    const arrNewPriceEl=document.querySelector("#arrNewPrice")
+    const price = [345, 65, 67., 87];
+      arrPriceEl.innerHTML=price;
+      btnUpdate.addEventListener("click",()=>{
+            arrNewPriceEl.innerHTML=updatePrice(price,23.3);
+      })
+        
+      
+    function updatePrice(prices,rate){
+        if(!prices || !Array.isArray(prices)|| prices.length<=0){
+                return alert("There is some problems with the prices")
+        }
+        if(!rate || isNaN(rate) ||rate<0 || rate>100 ){
+             return alert("There is some problems with the rates")
+        }
+            newArr=[];
+        for (let i = 0; i < prices.length; i++) {
+            newArr[i]=(prices[i]+ prices[i]*rate/100).toFixed(2);
+        }
+        return newArr
+        }
+
+
+
+
+
+    function findDifference(arr) {
+        if (arr.length === 0) {
+            return "Array is empty.";
+        }
+        let max = arr[0];
+        let min = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }else if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+        return max - min;
+    }
+
+    const numbers = [45, 20, 67, 56, 23, 56, 34, 90];
+    const difference = findDifference(numbers);
+    console.log("Difference between max and min: "+ difference);
+
+
+
+        </script>
+</body>
+</html>

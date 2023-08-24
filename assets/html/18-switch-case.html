@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch cases</title>
+</head>
+<body>
+    <!-- 
+    Write a program that receives information from a textbox
+        1 — if the information received is greater than 1500, apply 15% discount,
+        2 – if greater than  700, applies 13% discount,
+        3 – if greater than  500, applies 10% discount,
+        4 – if greater than  300, applies 5% discount,
+        5 – otherwise applies 2% discount and writes the result in a label.
+
+-->
+
+    <input type="number" id="price" placeholder="enter price">
+    <button onclick="setPrice()" >Calculate</button>
+    <h2 id="result">
+    </h2>
+
+
+<script>
+
+function setPrice(){
+    let price = document.querySelector("#price");
+    let result=price.value;
+    switch(true){
+        case (result>1500):result*=0.85;
+        break
+        case (result>700):result*=0.87;
+        break
+        case (result>500):result*=0.9;
+        break
+        case (result>300):result*=0.95;
+        break
+        default: result*=0.98;
+        
+    }
+    document.querySelector("#result").innerHTML = `The price is: ${result.toFixed(2)}`
+
+
+
+}
+
+
+
+</script>
+
+</body>
+</html>

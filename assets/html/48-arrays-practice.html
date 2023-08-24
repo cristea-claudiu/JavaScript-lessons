@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array practice</title>
+</head>
+<body>
+    <h3 id="myArray"></h3>
+    <button id="btnFinddMax">Find Max</button>
+    <h4 id="maxNum"></h4>
+
+
+
+    <script>
+        const arr = [];
+        const arr2=[]
+        
+
+        for (let i = 0; i < 10; i++) {
+    const randomNumber = Math.floor(Math.random() * 10001); 
+    arr.push(randomNumber);
+}
+     const myArray=document.querySelector("#myArray")
+     const btnFindMax=document.querySelector("#btnFinddMax")
+     const maxNum=document.querySelector("#maxNum")
+     myArray.innerText=arr;
+    
+     btnFindMax.addEventListener("click",(e)=>{
+        const maxNum=getMaxElement(arr);
+     })
+     function getMaxElement(){
+        if(!arr || !Array.isArray(arr) || arr.length<=0){
+            return alert("error")
+
+        }
+        let max=arr[0]
+        for(let i=1;i<arr.length;i++){
+            if(arr[i]>max){
+                max=arr[i]
+            }
+        }
+        maxNum.innerHTML=`Max number is: ${max}`
+     
+    }
+    
+    </script>
+</body>
+</html>

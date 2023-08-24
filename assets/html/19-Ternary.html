@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ternary</title>
+</head>
+<body>
+    
+
+    <input type="number" id="price" placeholder="enter price" oninput="setPrice()">
+    <input type="radio" id="re" name="status" value="retired" onchange="setPrice()" checked><label for="re" >Retired</label>
+    <input type="radio" id="wo" name="status"  value="working" onchange="setPrice()" ><label for="wo">Working</label>
+    <h2 id="result">
+    </h2>
+
+
+
+
+
+    <script>
+        const txtPrice = document.querySelector("#price");
+        const result=document.querySelector("#result");
+function setPrice(){
+    let status=document.querySelector('input[name="status"]:checked').value;
+    let price =txtPrice.value;
+    price = status ==="retired" ? price*=0.9 : price ;
+
+    result.innerHTML = `The price is: ${price}`
+    
+   
+}
+
+    </script>
+</body>
+</html>

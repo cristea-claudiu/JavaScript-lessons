@@ -1,0 +1,25 @@
+.switch{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    height: 50px;
+    width: 50px;
+    border-radius: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    cursor: pointer;
+}
+
+
+.dark{
+    background-color: black;
+    color: white;
+}
+.dark .switch{
+background-color: white;
+color: black;
+}

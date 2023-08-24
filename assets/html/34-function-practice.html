@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Practice</title>
+</head>
+<body>
+    <h1>Function Practice</h1>
+
+    <input type="integer"  id="txtNum" placeholder="enter number">
+    <button onclick="calculate()">Calculate</button>
+
+
+
+    <script>
+
+        const txtNum =  document.querySelector("#txtNum");
+        function calculate(){
+            const num=parseFloat(txtNum.value)
+            const result = isPrime(num);
+            if(result === "error"){
+                alert("Please enter only integers");
+                txtNum.value = ""; //clean the input area 
+                txtNum.focus(); //wihtout clicking the area it ensure to to focus
+                return;
+            }
+            alert(`The number you entered is ${result ? 'prime' : 'not prime'}`)
+        }
+    
+        //generic function which is independent
+        function isPrime(num){
+            
+            if(!num || isNaN(num) || num<2 || !Number.isInteger(num)){
+                return "error";
+            }
+            // 10 - >2, 3, 4
+            
+            let result = true;
+    
+            for(let i =2; i<num; i++){
+                if(num%i === 0){
+                    result = false;
+                    break;
+                }
+            }
+            return result;
+        }
+    
+    
+    </script>
+    
+</body>
+</html>

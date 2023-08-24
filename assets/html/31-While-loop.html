@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Loop Practice</title>
+</head>
+<body>
+    
+    <input type="number" id="txtNumber">
+    <button onclick="calculate1()">Calculate</button>
+    <h3 id="result"></h3>
+
+    <script>
+        txtInput = document.querySelector("#txtNumber");
+        //89341 -> 1  
+        //8934 ->4
+        //893 -> 3
+        //89 -> 9
+        //8 -> 8
+        //0
+
+        function calculate (){
+            //if number is negative convert to positive 
+            let num = Math.abs(txtInput.value);
+            let sum = 0;
+
+            while(num>0){
+                //to get last digit
+                let digit = num%10;
+                sum = sum+ digit;
+                //to throw last digit
+                num = Math.floor(num/10) //8934.1 -> 8934
+            }
+            result.innerHTML=`The Sum of Digits is ${sum}`;
+        }
+
+        //2nd using substring
+        function calculate1 (){
+
+            //89341 - > 8
+            //9341 -> 9
+            //341 -> 3
+            //41 -> 4
+            // 1 - > 1
+
+            //if number is negative convert to positive 
+            //let num = Math.abs(txtInput.value) + "";
+            let num = String(Math.abs(txtInput.value));
+            let sum = 0;
+            let index = 0;
+            while(index < num.length){
+                //console.log( num.substring(index, index+1) )
+                sum += parseInt(num.substring(index, index+1))
+                index++;
+            }
+            result.innerHTML=`The Sum of Digits is ${sum}`;
+        }
+        
+    </script>
+</body>
+</html>

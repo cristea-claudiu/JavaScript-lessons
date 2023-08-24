@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Value and Reference types</title>
+</head>
+<body>
+    
+
+
+
+
+
+    <script>
+
+      //********** VALUE TYPE **********  
+     let x=10;
+     let y=x;
+     y=15;
+     console.log(x,y);
+     console.log(x===y);
+      //********** Reference TYPE ********** 
+
+        let person1={name:"Jhon", age:34};
+        let person2 =person1;
+        let person3={name:"Jhon", age:34};
+        console.log(person1==person3);
+        console.log(person1);
+        console.log(person2);
+        person2.age=36
+        console.log(person1);
+        console.log(person2);
+        console.log(person1.name==person3.name);
+
+        const g=prompt("Enter an number")
+        const h=prompt("Enter another number")
+        const result= alert(Number(g)+Number(h))
+
+    </script>
+</body>
+</html>

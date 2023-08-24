@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop</title>
+</head>
+<body>
+    <form action="Enter"></form>
+<div class="container">
+    <h1 class="display-1" >Products discount</h1>
+    <input type="number" id="inputNumber" placeholder="%">
+    <button onclick="calculateDiscount()" type="button" >Apply</button>
+
+    <div class="list">
+        
+        <ul>
+            <li>Monitor $<em id="prices">120</em></li>
+            <li>MotherBoard $<em id="prices">200</em></li>
+            <li>CPU $<em id="prices">600</em></li>
+            <li>GPU $<em id="prices">1600</em></li>
+            <li>Total $ <em id="totalPrice">0</em></li>
+        </ul>
+    </div>
+</div>
+</form>
+
+    <script>
+
+let txtDiscountRate=document.querySelector("#inputNumber");
+let prices=document.querySelectorAll("#prices")
+let totalPrice=document.querySelector("#totalPrice");
+     function calculateDiscount(){
+
+        let discountRate=txtDiscountRate.value;
+        discountRate=(!discountRate || isNaN(discountRate)) || discountRate <0 || discountRate> 100  ? 0 : discountRate;
+       
+
+       for (let i=0; i<prices.length; i++){
+            const priceEl = prices[i];
+            let originalPrice = parseFloat(priceEl.innerText); 
+            const priceUpdated=originalPrice-originalPrice*discountRate/100;
+            priceEl.innerText=priceUpdated.toFixed(2)
+            
+       }
+
+       for (let i=0; i<prices.length; i++) {
+        const priceEl = prices[i];
+            let originalPrice = parseFloat(priceEl.innerText); 
+        let totalNumber=parseFloat(totalPrice.innerText);
+        totalPrice.innerText=totalNumber+originalPrice
+       }
+      
+    }
+
+
+    </script>
+</body>
+</html>

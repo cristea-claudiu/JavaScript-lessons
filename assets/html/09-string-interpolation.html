@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String interpolation</title>
+  </head>
+  <body>
+
+    <script>
+
+      const name="Jhon"
+      const lastname="Doe";
+      const age=23;
+      const message="I am "+name+" "+lastname+". I am "+age+" old"
+      console.log(message);
+      const message2=`i am ${name} ${lastname}. I am ${age} old`
+      console.log(message2);
+      const par=`Lorem ipsum dolor sit amet 
+      consectetur adipisicing elit. 
+      Laborum,perspiciatis illum? Voluptas recusandae 
+      quibusdam quae incidunt molestias,asperiores fugit repellat?`
+
+      let html='<div class="div1">Hello World</div>'+'<h2>Header</h2>';
+      let newhtml= `<div class="container">
+      <div class="div1">Hello World</div>
+      <h2>Header</h2>
+      <p>${message2}</p>
+      </div>
+      `
+      document.write(newhtml)
+
+    console.log(par);
+    </script>
+  </body>
+</html>

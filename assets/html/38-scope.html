@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    
+    <script>
+
+        //
+
+        let x = 6;
+        //let x = 9; we cannot declare the same named variables 
+        //in the same scope
+        const setNum1 = ()=>{
+            let x = 10; // when the scopes are different we can 
+            //declare the same named variable in different scope
+            console.log(x)
+        }
+        setNum1() 
+        console.log(++x)
+
+        //Block scope feature was added with ES6 for const and let
+        //when we declare variable in block scope with "var" it will act 
+        //as if there is no block sope 
+        //var - does not recognize block scope
+        const setNum2 = () =>{
+            let y = 44;
+            //block scope is in {} of if, for, while 
+            if(x>0){
+                var z = 99;
+            }
+            console.log(z)
+        }
+
+        setNum2();
+        console.log(z)
+
+    </script>
+</body>
+</html>
