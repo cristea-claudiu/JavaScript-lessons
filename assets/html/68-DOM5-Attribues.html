@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM attribute practice</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous" />
+      <script src="https://kit.fontawesome.com/ac98e73369.js" crossorigin="anonymous"></script>
+</head>
+<body class="p-5">
+
+    
+    
+    <div class="input-group mb-3">
+        <input 
+            type="numbers" 
+            class="form-control" 
+            placeholder="" 
+            aria-label="Button" 
+            id="txtSSN"
+            aria-describedby="">
+        <button 
+            class="btn btn-outline-secondary" 
+            type="button"
+            disabled 
+            id="btnUpdate">
+            Update
+        </button>
+    </div>
+    <div class="input-group mb-3">
+        <input 
+            type="password" 
+            class="form-control" 
+            placeholder="" 
+            aria-label="Button" 
+            id="txtpassword"
+            aria-describedby="">
+        <button 
+            class="btn btn-outline-secondary" 
+            type="button"
+            id="btnShowPass">
+            <i class="fa-regular fa-eye"></i>
+            <!-- <i class="fa-regular fa-eye-slash"></i> -->
+        </button>
+    </div>
+    
+    <script>
+
+        const txtSSN = document.getElementById("txtSSN");
+        const btnUpdate = document.getElementById("btnUpdate");
+        const txtPASSWORD = document.getElementById("txtpassword");
+        const btnShowPass= document.getElementById("btnShowPass");
+
+        txtSSN.addEventListener("input", (e)=>{
+            let ssnNumber = e.target.value;
+            if(ssnNumber && ssnNumber.length ===9){
+                btnUpdate.removeAttribute("disabled")
+            }else{
+                btnUpdate.setAttribute("disabled", "")
+            }
+        })
+
+        btnShowPass.addEventListener("click", ()=>{
+            if(txtPASSWORD.getAttribute("type")==="password"){
+                txtPASSWORD.setAttribute("type", "text")
+                btnShowPass.innerHTML = `<i class="fa-regular fa-eye-slash"></i>`
+            }else{
+                txtPASSWORD.setAttribute("type", "password")
+                btnShowPass.innerHTML = `<i class="fa-regular fa-eye"></i>`
+            }
+        
+        })
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+export const students = [
+  { id: 1, name: "John", point: 80 },
+  { id: 2, name: "Garry", point: 32 },
+  { id: 3, name: "Adam", point: 56 },
+  { id: 4, name: "Sophia", point: 76 },
+  { id: 5, name: "Anna", point: 90 },
+  { id: 6, name: "Jack", point: 80 },
+  { id: 7, name: "Tom", point: 90 },
+  { id: 8, name: "Jerry", point: 70 },
+  { id: 9, name: "Lisa", point: 90 },
+  { id: 10, name: "Mary", point: 45 },
+  { id: 11, name: "Peter", point: 34 },
+  { id: 12, name: "Nancy", point: 90 },
+  { id: 13, name: "Kate", point: 63 },
+  { id: 14, name: "Joseph", point: 23 },
+  { id: 15, name: "Alice", point: 12 },
+  { id: 16, name: "Eric", point: 34 },
+  { id: 17, name: "Benjamin", point: 75 },
+  { id: 18, name: "Aaron", point: 35 },
+  { id: 19, name: "David", point: 70 }
+];

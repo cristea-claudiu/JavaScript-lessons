@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM1</title>
+</head>
+<body>  
+
+    <h1 id="welcomeText">Welcome to my web app</h1>
+    <article></article>
+    
+    <p class="contact">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dicta odio non aspernatur dolore voluptas illo aliquam dolores libero ipsa?</p>
+
+
+
+    <script>
+       const welcomeText= document.getElementById("welcomeText");
+        const contact=document.getElementsByClassName("contact");
+        welcomeText.innerText+=". Enjoy!"
+        const article=document.getElementsByTagName("article");
+        article[0].innerText="hello"
+        console.log(article);
+        contact[0].innerText+=" Gica maturica"
+        console.log(contact);
+        
+    </script>
+
+</body>
+</html>

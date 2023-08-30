@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REST</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+const sum1=(a,b)=>{
+    return a+b
+}
+console.log(sum1(4,5));
+const sum2=(...nums)=>{
+    return nums.reduce((x,y)=>x+y)
+}
+console.log(sum2(49,50,345,345,345,234));
+
+
+const averege=(firstName,lastName, ...scores)=>{
+    return `${firstName} ${lastName} has an averege of : ${(scores.reduce((x,y)=>x+y)/scores.length).toFixed(2)}`
+}
+console.log(averege("Gica","Maturica",70,78,67,76,56,45));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+
+
+
+
+
+    <script>
+
+       const person={
+        firstName:"Gica",
+        lastName:"Doe",
+        age:25,
+        job:{
+            tittle:"Software Engineer",
+            company:"Google"
+            }
+        } 
+        // classic ussage
+        const message=`${person.firstName} ${person.lastName} is ${person.age} years old`
+        console.log(message);
+        // using destructuring
+        const{firstName,lastName,age,job}=person;
+        const{tittle,company}=job;
+        const message2=`${firstName} ${lastName} is ${age} years old. He is ${tittle} at ${company}`
+        console.log(message2);
+
+        const sayHello1=(stName,ndName)=>{
+            alert(`Hello ${person.firstName} ${person.lastName}`)
+        }
+        sayHello1(firstName,lastName)
+        const sayHello2=(p)=>{
+            alert(`Hello ${p.firstName} ${p.lastName}`)
+        }
+            sayHello2(person)
+                // const {firstName, lastName} = person
+
+                const sayHello3 = ({firstName, lastName})=>{
+            alert(`Hello ${firstName} ${lastName}`)
+        }
+
+        sayHello3(person)
+
+
+
+
+
+
+    </script>
+</body>
+</html>

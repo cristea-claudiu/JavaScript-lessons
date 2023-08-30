@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Access methods</title>
+</head>
+<body>
+    
+    <header>
+        <h1>DOM Access methods</h1>
+        <h2>Hello World</h2>
+    </header>
+
+    <main>
+        <p>ello</p>
+        <ul id="menuList" class="list">
+            <li> Lorem1<span>➡️</span> </li>
+            <li>Access <span>➡️</span></li>
+            <li>Contact<span>➡️</span></li>
+
+            <li>Products <span>➡️</span></li>
+            <li>About<span>➡️</span></li>
+        </ul>
+
+        <h6>hi</h6>
+    </main>
+
+
+    <script>
+        const spanEls = document.querySelectorAll(".list li span")
+        
+        //closest
+        spanEls.forEach((span)=>{
+            span.addEventListener("click", (e)=>{
+                //console.log(e.target)
+               // console.log(e.target.closest("li"))
+                const liEl=e.target.closest("li");
+                liEl.style.backgroundColor = "yellow"
+            })
+        })
+
+        //children
+        const bodyEl = document.querySelector("body").children
+        console.log(bodyEl) 
+
+
+        const menuList = document.getElementById("menuList");
+
+        console.log(menuList)
+        console.log(menuList.children)
+        console.log(menuList.childNodes)
+        console.log(menuList.firstElementChild.innerHTML)
+        console.log(menuList.lastElementChild.innerText)
+        console.log(menuList.parentElement)
+        console.log(menuList.nextElementSibling)
+        console.log(menuList.previousElementSibling)
+        const li3 = document.querySelector("#menuList li:nth-child(3)")
+        console.log(li3.innerHTML)
+        console.log(li3.nextElementSibling.innerHTML)
+        console.log(li3.previousElementSibling.innerHTML)
+
+    </script>
+
+</body>
+</html>

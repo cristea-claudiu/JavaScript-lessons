@@ -1,0 +1,33 @@
+h1{
+    color: red;
+}
+@font-face {
+    font-family: digital;
+    src: url('/assets/fonts/digital-7.ttf');
+}
+.clock{
+    font-size: 3rem;
+    font-family: digital;
+    list-style-type: none;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 10px;
+    position: fixed;
+    left: 40px;
+    z-index: 1000;
+    box-shadow: -1rem .5rem rgba(0,0,0,.5);
+    cursor: pointer;
+    transition: all 0.5s;
+    pointer-events: none;
+
+}
+.clock li{
+    
+    display: inline;
+}
+.hidden{
+opacity: 0;}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread practice</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+        let cities1=["Ankara","Tokyo","Beijing","Paris","London"]
+        let cities2=[cities1,"Bucharest","Istanbul"]
+        let cities3=["Helsinki","Bucharest"]
+        let cities4=[...cities1,"Almaty",...cities3]
+
+        let country1=["Germany","China","Denmark","Turkey"]
+        let country2=["Kazakhstan","China","Mongolia","Turkey"]
+        let country3=[...country1,...country2];
+
+        
+        console.log(cities2);
+        console.log(cities4);
+        console.log(country3);
+        //to remove duplicated elements we converted to Set and then to array ussing spread
+        let uniqueCountries=[...new Set(country3)]
+        console.log(uniqueCountries);
+
+
+
+
+
+    </script>
+</body>
+</html>

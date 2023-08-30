@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays Reduce Practice</title>
+</head>
+<body>
+    
+
+
+
+
+    <script>
+        const arr=[45, 54,76, 23];
+
+        let sum=0;
+        for(let i=0;i<arr.length;i++){sum+=arr[i];}
+        console.log(sum);
+        //using reduce
+        const sumByReduce= arr.reduce((x,y)=>{console.log(x,y);return x*y;})
+        console.log(sumByReduce);
+
+
+
+
+        const salaries=[3000,2891,3500,4200,7000,2500]
+        const increasedSalary= salaries
+        .filter((salary)=>salary<3001)
+        .map((salary)=>salary*1.1)
+        .reduce((x,y)=>x+y)
+        console.log(increasedSalary);
+
+    </script>
+</body>
+</html>

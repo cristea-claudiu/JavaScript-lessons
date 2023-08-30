@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays some every</title>
+</head>
+<body>
+    
+
+
+    <script>
+        const salaries=[3000,2891,3500,4200,7000,2500];
+        //if all elements satisfied the condition it will be true
+        //like AND
+           if(salaries.every(salary=>salary>2000)){
+            alert("All are greater then 2000")
+           }
+        //if any element satisfies the condition it will return true
+        //like OR
+           if(salaries.some(salary=>salary<3000)){
+            alert("Some are less then 3000")
+           }  
+
+    </script>
+</body>
+</html>
