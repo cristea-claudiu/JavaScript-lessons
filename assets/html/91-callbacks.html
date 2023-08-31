@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack Function</title>
+</head>
+<body>
+
+    <script>
+
+        const giveOrder = (cb)=>{
+            console.log("Order is given");
+            setTimeout(()=>{
+                console.log("Order is ready")
+                cb("pizza")
+            }, 4000)
+        }
+
+        console.log("Went to shopping mall");
+        console.log("Played bowling");
+        console.log("Felt hungry")
+        
+        
+        giveOrder((food)=>{
+            console.log(`Food ordered: ${food}`)
+            console.log("Happily fiinished the food")
+        })
+
+        console.log("Went to wash room")
+
+    </script>
+    
+</body>
+</html>

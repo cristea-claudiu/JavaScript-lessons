@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack Chain</title>
+</head>
+<body>
+    
+
+
+
+
+    <script>
+
+        const giveOrder=(cb)=>{
+            console.log("Ordered food");
+            setTimeout(() => {
+                console.log("Ordered food is ready");
+                cb()
+            }, 3000);
+        }
+        const eatMeal=(cb)=>{
+            console.log("Start eating food");
+            setTimeout(() => {
+                console.log("Finished eating food");
+                cb()
+            }, 2000);
+        }
+        const watchMovie=()=>{
+            console.log("Started Movie");
+            setTimeout(() => {
+                console.log("Finished Movie");
+                
+            }, 1500);
+        }
+        const eatPopcorn=()=>{
+            console.log("Started eating popcorn");
+            setTimeout(() => {
+                console.log("Finished eating popcorn");
+                
+            }, 1500);
+        }
+
+        giveOrder(()=>{
+            eatMeal(()=>{
+                watchMovie();
+                eatPopcorn();
+            })
+       
+        })
+        
+
+
+
+
+    </script>
+</body>
+</html>

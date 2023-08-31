@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body>
+    
+    <script>
+        const sum = (a, b)=>{
+            setTimeout(()=>{
+                const total = a+b;
+                return total;
+            }, 1)
+        }
+
+        /*
+            We cannot return asyncronous methods in this way.
+            Because asyncronous methods are running at different threads.
+            So, javascript will not wait for their values to be returned.
+            Which means, even they return values we cannot get it
+
+        */
+
+        console.log("Sum of two numbers: ")
+        const result = sum(50, 40);
+        console.log(result);
+    </script>
+</body>
+</html>

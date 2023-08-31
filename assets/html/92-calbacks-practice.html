@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack practice</title>
+</head>
+<body>
+
+  <script>
+
+const sum = (a, b,cb)=>{
+        setTimeout(()=>{
+            const total = a+b;
+            cb(total);
+            
+        }, 1)
+    }
+
+
+    
+    const result = sum(50, 40,(gica)=>{
+        console.log("Sum of two numbers: ",gica);
+    });
+
+  </script>
+
+
+
+
+    
+</body>
+</html>
